@@ -1,0 +1,7 @@
+Reflection (Part 1):
+We used a hybrid correction pipeline combining LanguageTool grammar correction
+and spaCy-based token cleanup. The first stage automatically fixes spelling,
+agreement, and punctuation issues, while the second removes duplicate words,
+normalizes possessives, and fixes spacing. This improved readability without
+altering legal meaning. Challenges included special legal citations and case
+numbers that need conservative handling.
