@@ -1,0 +1,72 @@
+
+BONUS PART - VISUALIZATION AND ANALYSIS SUMMARY
+================================================
+
+1. VISUALIZATIONS CREATED
+--------------------------
+✓ PCA Visualization: Shows cases projected onto 2D space using Principal Component Analysis
+  - First two components explain 3.0% and 2.8% of variance
+  - File: pca_visualization.png
+
+✓ t-SNE Visualization: Shows non-linear dimensionality reduction for better cluster separation
+  - Reveals natural groupings in the data
+  - File: tsne_visualization.png
+
+✓ Clustered t-SNE: Shows K-means clustering results overlaid on t-SNE projection
+  - Optimal clusters: 5 (determined using elbow method)
+  - File: tsne_clustered.png
+
+✓ Elbow Curve: Helps determine optimal number of clusters
+  - File: elbow_curve.png
+
+✓ Similarity Heatmap: Shows pairwise similarities between cases
+  - Displays subset of 30 cases
+  - File: similarity_heatmap.png
+
+2. CLUSTER ANALYSIS
+-------------------
+Number of clusters identified: 5
+
+Cluster Distribution:
+  Cluster 1: 35 cases (21.2%)
+  Cluster 2: 29 cases (17.6%)
+  Cluster 3: 37 cases (22.4%)
+  Cluster 4: 34 cases (20.6%)
+  Cluster 5: 30 cases (18.2%)
+
+
+3. INSIGHTS FROM VISUALIZATIONS
+--------------------------------
+• PCA Visualization: The first two principal components capture the most significant
+  variations in case embeddings. Cases that are close together in PCA space share
+  similar semantic content.
+
+• t-SNE Visualization: Provides better separation of clusters compared to PCA.
+  Distinct groups visible in t-SNE plot represent cases with very similar legal
+  issues, terminology, or procedural contexts.
+
+• Clustering: K-means identified 5 natural groups in the data. Cases within
+  the same cluster likely deal with similar legal domains (e.g., criminal appeals,
+  civil disputes, constitutional matters).
+
+• Similarity Patterns: The heatmap reveals that certain cases have very high
+  similarity (bright colors), indicating they may be related appeals, similar
+  offenses, or cases citing the same legal precedents.
+
+4. PRACTICAL APPLICATIONS
+--------------------------
+These visualizations enable:
+• Quick identification of case clusters by legal domain
+• Visual exploration of the case similarity space
+• Understanding of embedding quality and data distribution
+• Interactive querying through the CLI interface
+
+5. INTERACTIVE FEATURES
+------------------------
+The command-line interface allows:
+• Querying any case to find similar cases
+• Viewing cluster memberships
+• Exploring case relationships interactively
+• Testing retrieval system with custom queries
+
+All visualization files saved to: /media/bilal/1070824B7082380C/NLP_Assignment3/assignment3_outputs/bonus_visualizations
