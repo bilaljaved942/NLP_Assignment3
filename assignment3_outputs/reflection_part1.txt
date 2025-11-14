@@ -1,7 +1,7 @@
 Reflection (Part 1):
-We used a hybrid correction pipeline combining LanguageTool grammar correction
-and spaCy-based token cleanup. The first stage automatically fixes spelling,
-agreement, and punctuation issues, while the second removes duplicate words,
-normalizes possessives, and fixes spacing. This improved readability without
-altering legal meaning. Challenges included special legal citations and case
-numbers that need conservative handling.
+We applied a hybrid pipeline combining LanguageTool grammar correction (if available)
+with POS- and dependency-aware refinements using spaCy. The POS stage handles
+conservative, targeted changes: duplicate removal, safe possessive normalization,
+insertions of definite article for specific legal nouns, and simple subject-verb
+corrections by converting bare present verbs to past where a singular subject
+was detected. These edits are conservative to avoid altering legal meaning.
